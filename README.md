@@ -118,7 +118,6 @@ Answer the following questions in your analysis. You'll submit your analysis as 
 ### Question 1
 - How many instance variables are there in `Person201`?
 - How many constructors are there in `Person201`?
-- How many constructors are there in `Person201`?
 
 ### Question 2
 According to the `equals` method of the `Person201` class, when are two `Person201` objects considered to be equal? Is it case sensitive for their names or for the names of their buildings?
