@@ -1,5 +1,7 @@
 # Project 0: Person201
 
+This project uses a `Person201` class to keep track of data about many individuals. We will use this along with static utility methods from `Person201Utilities` and main/driver methods from `Person201Demo` and `Person201Finder` to search for individuals in Compsci 201 who are near each other on campus. You may be surprised how many classmates you find live or hang out near you! 
+
 ## Outline
 - [Goals](#goals)
 - [Starter Code and Using Git](#starter-code-and-using-git)
@@ -26,74 +28,36 @@ We'll be using Git and the installation of GitLab at [coursework.cs.duke.edu](ht
 **[This document details the workflow](https://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** We recommend that you read and follow the directions carefully this first time working on a project! While coding, we recommend that you periodically (perhaps when completing a method or small section) push your changes as explained in Section 5.
 
 
-## Developing and Running the classes in Project P0: Person201
+## Coding in Project P0: Person201
 
-When you fork and clone the project, you'll be working primarily within the `src` folder with `.java` files beginning with `Person201`. Your goal is to modify three programs/classes (`Person201.java`, `Person201Driver.java`, and `Person201Scanner.java`) and create a new program (`Person201Solo.java`) to generate the desired output. You will need some information from the output to complete the reflect document linked at the end of this document.
+When you fork and clone the project, you'll be working primarily within the `src` folder with `.java` files beginning with `Person201.java`. You will modify two programs/classes (`Person201.java` and `Person201Utilities.java`), and will run `Person201Demo.java` to see if your changes are working. Then you will create a new program called `Person201Finder.java`.
 
 The following subsections sections detail the specific action items you should take while completing this project. To see the details for a section, just click the small arrow to expand the information, or click the small arrow again to collapse those details.
 
-### Run `Person201Driver.java` and change `Person201.java`
-<details>
-<summary>Initial Runs and Changes</summary>
+### Run `Person201Demo.java`
 
-First run the main method in `Person201Driver.` The output of the program should be:
+First, without changing anything, run the main method in `Person201Demo.` The output of the program (not counting terminal commands to compile and run the program) should be:
 
 ```
-no-name woto @ 35.9312N 79.0058W
-Ricardo harambee @ 34.6037S 58.3816W
-Gelareh affective @ 33.89S 151.2E
-name woto
-name woto
+Searching for people near Fain
+
+People on the same floor: 
+
+People in the same building: 
+        -Wiseman, LSRC, 1
+        -Astrachan, LSRC, 2
+        -Stephens-Martinez, LSRC, 2
 ```
 
-Next, open `Person201.java` in the VS Code editor, and look at each of the three `//TODO: change here` comments in the `Person201.java` class. Fix the code so that when the same `Person201Driver` main program is run the output is as shown below:
 
-```
-Owen woto @ 35.9312N 79.0058W
-Ricardo harambee @ 34.6037S 58.3816W
-Gelareh affective @ 33.89S 151.2E
-Ricardo harambe
-Gelareh affective
-```
+Take a careful look at the main method you just ran. Note that it creates `Person201` **objects**. Those are defined in the `Person201` **class**, which you can see in the `Person201.java` file. You can also see that it reads data about persons from a file by calling the static `readFiles` method defined in `Person201Utilities.java`. The particular file, `small.txt`, contains data about a few of your professors and their office locations; the file is in the `data` folder of your project and you can view it directly in Visual Studio Code.
 
-You can accomplish the above in three steps:
-1. Changing the value assigned to instance variable `myName` in the default constructor
-2. Changing the body of the method `getPhrase` to return the person's phrase (use an instance variable).
-3. Changing the body of the method `getName` to return the person's name (use an instance variable).
+The main method you ran from `Person201Demo` is *supposed* to define a query person and then search for all other persons in the provided data file `small.txt` that are on the same floor of the building or at least in the same building, and print those lists to the screen. You can already see that something is not quite right: `Wiseman, LSRC, 1` is on the same floor (`1`) of the same building (`LSRC`) as the query person `Fain, LSRC, 1`, but is not printed under the heading `People on the same floor:`. Your first two tasks will be to fix this.
 
-Now that you've done this, change the `main` method in class `Person201Driver` by creating a new `Person201` variable named s (short for Sam) with the value shown:
 
-`Person201 s = new Person201("Sam", 44.9978, -93.2650, "hello");`
+### Fix Person201
 
-Add one `System.out.println` statement to print the value of this variable `s` so the output of running the program is as follows:
-
-```
-Owen woto @ 35.9312N 79.0058W
-Ricardo harambee @ 34.6037S 58.3816W
-Gelareh affective @ 33.89S 151.2E
-Sam hello @ 44.9978N 93.265W
-Ricardo harambee
-Gelareh affective
-```
-</details>
-
-### Running Person201Scanner and changing Data Source
-<details>
-<summary>Scanning from Another File</summary>
-
-Once the `Person201` class has been updated so that `Person201Driver` generates output as shown above, you should run `Person201Scanner` to see the output below -- running the program is described after the output.
-
-```
-Owen woto @ 35.9312N 79.0058W
-Ricardo harambee @ 34.6037S 58.3816W
-Gelareh affective @ 33.89S 151.2E
-total # 3
-```
-
-You'll then need to Run `Person201Scanner`.
-
-You should edit the `main` method of `Person201Scanner.java` so that the file `data/large.txt` is used as the source of data. This data file includes a random set of names, locations, and words from several sources. You should see 97 different names, phrases and latitude/longitude locations.
-</details>
+Take a look at the `Person201.java` file. This is the class that defines `Person201` objects. 
 
 ### Running Person201Scanner from a Web Source
 <details>

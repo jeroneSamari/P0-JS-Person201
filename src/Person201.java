@@ -9,9 +9,9 @@
 
  public class Person201 {
 
-    private String myName;      // name of person
-    private String myBuilding;      // residence hall name
-    private int myFloor;        // floor number on residence hall  
+    private String myName;          // name of person or anonymous
+    private String myBuilding;      // building where person is
+    private int myFloor;            // floor number within building  
 
     /**
      * Default constructor
