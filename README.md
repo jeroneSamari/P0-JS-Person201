@@ -5,7 +5,13 @@ This project uses a `Person201` class to keep track of data about many individua
 ## Outline
 - [Goals](#goals)
 - [Starter Code and Using Git](#starter-code-and-using-git)
-- [Developing and Running the classes in Project P0: Person201](#developing-and-running-the-classes-in-project-p0-person201)
+- [Coding in Project P0: Person201](#coding-in-project-p0-person201)
+    - [Run Person201Demo](#run-person201demo)
+    - [Fix Person201](#fix-person201)
+    - [Interlude: Understanding Multi-file Programs](#interlude-understanding-multi-file-programs)
+    - [Fix sameFloor in Person201Utilities](#fix-samefloor-in-person201utilities)
+    - [Checking sameFloor Methods](#checking-samefloor-methods)
+    - [Create and Run Person201Finder](#create-and-run-person201finder)
 - [Analysis Questions](#analysis-questions)
 - [Submission, Reflect, Grading](#submission-reflect-grading)
 
@@ -34,7 +40,7 @@ When you fork and clone the project, you'll be working primarily within the `src
 
 The following subsections sections detail the specific action items you should take while completing this project. To see the details for a section, just click the small arrow to expand the information, or click the small arrow again to collapse those details.
 
-### Run `Person201Demo.java`
+### Run Person201Demo
 
 First, without changing anything, run the main method in `Person201Demo.` The output of the program (not counting terminal commands to compile and run the program) should be:
 
@@ -76,7 +82,7 @@ You will see a TODO written in a comment before the `sameFloor` method. Note tha
 
 You can model your solution off of the `sameBuilding` method implemented above.
 
-### Checking sameFloor methods
+### Checking sameFloor Methods
 
 When you have finished fixing the `sameFloor` method in both `Person201.java` and `Person201Utilities.java`, again run the main method of `Person201Demo`. You should now see the following output (again ignoring the terminal commands to compile and run the code):
 
@@ -110,19 +116,20 @@ When you have finished, run the main method of your new `Person201Finder` class.
 Answer the following questions in your analysis. You'll submit your analysis as a separate PDF as a separate assignment ***to Gradescope***. 
 
 ### Question 1
-How many instance variables are there in `Person201`?
+- How many instance variables are there in `Person201`?
+- How many constructors are there in `Person201`?
+- How many constructors are there in `Person201`?
 
 ### Question 2
-How many constructors are there in `Person201`?
+According to the `equals` method of the `Person201` class, when are two `Person201` objects considered to be equal? Is it case sensitive for their names or for the names of their buildings?
 
 ### Question 3
-In the Person201Scanner class there are two methods:readFile and readURL. Briefly describe what these methods do and comment on their similarities and their differences.
+Does the main method of `Person201Demo` create any objects of type `Person201Utilities`? If so, why? If not, why is this not necessary?
 
 ### Question 4
-When Person201Scanner is run with the URL for the online medium.txt file, how many entries are printed?
-
-### Question 5
-When Person201Scanner is run with the URL for the online medium.txt file, what is the last name printed?
+Note that your `Person201Finder.java` program did not need any kind of password to automatically pull data from the `people.txt` file; it is publicly available on the internet. In one or two paragraphs, reflect on and respond to one or more of the following related questions. This question is graded for honest effort, not correctness.
+- Do you think it's a good idea to keep information about individuals publicly available on the internet? What are some pros and cons?
+- If you were the designer of a web application that included personal information (such as a social media app), how would you protect the privacy of your users?
 
 ***After completing the analysis questions you submit your answers in a PDF to Gradescope in the appropriate assignment.***
 
@@ -138,8 +145,8 @@ Your submission will be graded by the following rubric:
 | Class Modified | Points |
 | ------ | ------ |
 | Person201 | 4 |
-| Person201Driver | 4 |
-| Person201Solo | 4 |
+| Person201Utilities | 4 |
+| Person201Finder | 4 |
 | Analysis | 4 |
 
 The first three categories will be autograded on Gradescope, the analysis will be graded by teaching assistants.
