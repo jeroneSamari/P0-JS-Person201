@@ -54,12 +54,21 @@ Take a careful look at the main method you just ran. Note that it creates `Perso
 
 The main method you ran from `Person201Demo` is *supposed* to define a query person and then search for all other persons in the provided data file `small.txt` that are on the same floor of the building or at least in the same building, and print those lists to the screen. You can already see that something is not quite right: `Wiseman, LSRC, 1` is on the same floor (`1`) of the same building (`LSRC`) as the query person `Fain, LSRC, 1`, but is not printed under the heading `People on the same floor:`. Your first two tasks will be to fix this.
 
-
 ### Fix Person201
 
-Take a look at the `Person201.java` file. This is the class that defines `Person201` objects. 
+Take a look at the `Person201.java` file. This is the class that defines `Person201` objects. Note the **instance variables** defined first outside of any methods - every `Person201` object has a value for each of these that can be accessed with the `.` operator. Two constructors, one default and one with initial data, are then provided for creating `Person201` objects. Finally, a number of other public and *not* static methods are defined - these are methods other code can call on `Person201` objects using the `.` operator.
 
-### Running Person201Scanner from a Web Source
+You will see a TODO written in a comment before the `sameFloor` method. Modify this method so that it returns `true` if the parameter `other` object has the same `myBuilding` and `myFloor` values as `this` object. Feel free to use the correctly implemented `sameBuilding` method as a *helper method* to determine if they have the same building.
+
+### Interlude: Understanding Multi-file Programs
+
+After fixing the `sameFloor` method of `Person201`, try running the main method of `Person201Demo` again. You should notice...no change! What gives?
+
+Most software consists of **many** different files, each organized into smaller units called `methods` in Java (or functions in other languages). This practice helps us to keep code organized into comprehensible units. 
+
+For this project, `Person201.java` defines `Person201` objects (what data they hold and what basic operations they support), `Person201Utilities.java` defines static methods that do things having to do with multiple `Person201` objects, and `Person201Demo.java` uses `Person201` objects and `Person201Utilities` methods to search for nearby people given a data source. Fixing `Person201` doesn't complete fix the problem with `Person201Demo` because it actually calls a method from `Person201Utilities`, namely the `sameFloor` method. Next we will fix that method.
+
+### Fix sameFloor in Person201Utilities
 <details>
 <summary>Scanning from a Web source</summary>
 
