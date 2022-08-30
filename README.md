@@ -38,7 +38,7 @@ We'll be using Git and the installation of GitLab at [coursework.cs.duke.edu](ht
 
 When you fork and clone the project, you'll be working primarily within the `src` folder with `.java` files beginning with `Person201.java`. You will modify two programs/classes (`Person201.java` and `Person201Utilities.java`), and will run `Person201Demo.java` to see if your changes are working. Then you will create a new program called `Person201Finder.java`.
 
-The following subsections sections detail the specific action items you should take while completing this project. To see the details for a section, just click the small arrow to expand the information, or click the small arrow again to collapse those details.
+The following subsections sections detail the specific action items you should take while completing this project.
 
 ### Run Person201Demo
 
@@ -72,15 +72,15 @@ After fixing the `sameFloor` method of `Person201`, try running the main method 
 
 Most software consists of **many** different files, each organized into smaller units called `methods` in Java (or functions in other languages). This practice helps us to keep code organized into comprehensible units. 
 
-For this project, `Person201.java` defines `Person201` objects (what data they hold and what basic operations they support), `Person201Utilities.java` defines static methods that do things having to do with multiple `Person201` objects, and `Person201Demo.java` uses `Person201` objects and `Person201Utilities` methods to search for nearby people given a data source. Fixing `Person201` doesn't complete fix the problem with `Person201Demo` because it actually calls a method from `Person201Utilities`, namely the `sameFloor` method. Next we will fix that method.
+For this project, `Person201.java` defines `Person201` objects (what data they hold and what basic operations they support), `Person201Utilities.java` defines static methods that do things having to do with multiple `Person201` objects, and `Person201Demo.java` uses `Person201` objects and `Person201Utilities` methods to search for nearby people given a data source. Fixing `Person201` doesn't completely address the problem with `Person201Demo` because it actually calls a method from `Person201Utilities`, namely the `sameFloor` method. Next we will fix that method.
 
 ### Fix sameFloor in Person201Utilities
 
 Take a look at the `Person201Utilities.java` file. Note that there are no instance variables and all of the methods are static. You can see the usage of these methods in `Person201Demo.java`.
 
-You will see a TODO written in a comment before the `sameFloor` method. Note that this method has the same name as the one you edited in `Person201` but they are quite different. This one takes as input an **array** of `Person201` objects called `people` plus another separate single `Person201` object called `person`. It should return a `List` of `Person201` objects containing all `Person201` objects in `people` that are not exactly equal to `person` but have the same value `myFloor` and `myBuilding` as `person`.
+You will see a TODO written in a comment before the `sameFloor` method. Note that this method has the same name as the one you edited in `Person201` but they are quite different. This one takes as input an **array** of `Person201` objects called `people` plus another separate single `Person201` object called `person`. It should return a `List` of `Person201` objects containing all `Person201` objects in `people` that are not exactly equal to `person` but have the same value of `myFloor` and `myBuilding` as `person`.
 
-You can model your solution off of the `sameBuilding` method implemented above.
+You can model your solution off of the `sameBuilding` method implemented above, and may wish to use the dynamic `sameFloor` method of the `Person201` class you wrote previously as a helper.
 
 ### Checking sameFloor Methods
 
