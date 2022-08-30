@@ -33,14 +33,14 @@
         myFloor = floor;
     }
 
-    /*
+    /**
      * @return this person's name
      */
     public String getName(){
         return myName;
     }
 
-    /*
+    /**
      * @param other A person
      * @return true if other and this person are in
      * the same building, else false
@@ -54,7 +54,7 @@
         return false;
     }
 
-    /* 
+    /** 
      * TODO: Fix so that returns true only if other has the
      * same building AND the same floor.
     */
@@ -62,7 +62,7 @@
         return true;
     }
 
-    /*
+    /**
      * Two Person201 objects are considered equal
      * if they have the same name, building, and floor
      */
@@ -78,7 +78,7 @@
         return false;
     }
 
-    /*
+    /**
      * Person201 objects print in the following format:
      * myName, myBuilding, myFloor
      */
