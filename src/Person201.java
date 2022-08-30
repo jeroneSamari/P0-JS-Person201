@@ -33,10 +33,18 @@
         myFloor = floor;
     }
 
+    /*
+     * @return this person's name
+     */
     public String getName(){
         return myName;
     }
 
+    /*
+     * @param other A person
+     * @return true if other and this person are in
+     * the same building, else false
+     */
     public boolean sameBuilding (Person201 other) {
         String buildingA = myBuilding.toLowerCase();
         String buildingB = other.myBuilding.toLowerCase();
@@ -54,6 +62,10 @@
         return true;
     }
 
+    /*
+     * Two Person201 objects are considered equal
+     * if they have the same name, building, and floor
+     */
     @Override
     public boolean equals(Object other) {
         if (other.getClass() != this.getClass()) {
@@ -66,6 +78,10 @@
         return false;
     }
 
+    /*
+     * Person201 objects print in the following format:
+     * myName, myBuilding, myFloor
+     */
     @Override
     public String toString(){
         return myName + ", " + myBuilding + ", " + Integer.toString(myFloor);
