@@ -3,6 +3,7 @@ import java.util.*;
 import java.net.*;
 
 /**
+ * For use in Compsci 201, P0, Duke University
  * Static utility methods for reading Person201 data
  * from files/url, checking if Person201 objects are in 
  * the same building or on the same floor, printing
