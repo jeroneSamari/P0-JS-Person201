@@ -134,16 +134,3 @@ Note that your `Person201Finder.java` program did not need any kind of password 
 
 ## Submission and Grading
 You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
-
-
-### Grading
-Your submission will be graded by the following rubric:
-
-| Class Modified | Points |
-| ------ | ------ |
-| Person201 | 4 |
-| Person201Utilities | 4 |
-| Person201Finder | 4 |
-| Analysis | 4 |
-
-The first three categories will be autograded on Gradescope, the analysis will be graded by teaching assistants.
