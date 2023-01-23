@@ -36,7 +36,9 @@ We'll be using Git and the installation of GitLab at [coursework.cs.duke.edu](ht
 
 ## Coding in Project P0: Person201
 
-When you fork and clone the project, you'll be working primarily within the `src` folder with `.java` files beginning with `Person201.java`. You will modify two programs/classes (`Person201.java` and `Person201Utilities.java`), and will run `Person201Demo.java` to see if your changes are working. Then you will create a new program called `Person201Finder.java`.
+When you fork and clone the project, **make sure you open the correct project folder in VS Code** following the [directions shown here](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md#step-3-open-the-project-in-vs-code).
+
+You will be working primarily with the `.java` files in the `src` folder beginning with `Person201.java`. You will modify two programs/classes (`Person201.java` and `Person201Utilities.java`), and will run `Person201Demo.java` to see if your changes are working. Then you will create a new program called `Person201Finder.java`.
 
 The following subsections sections detail the specific action items you should take while completing this project.
 
