@@ -22,11 +22,6 @@ public class Person201Finder {
 
         System.out.println("People in the same building: ");
         List<Person201> sameBuilding = Person201Utilities.sameBuilding(people, query);
-        for (Person201 p : sameFloor) {
-            if (sameBuilding.contains(p)) {
-                sameBuilding.remove(p);
-            }
-        }    
         Person201Utilities.printPeople(sameBuilding);
     }
 }
