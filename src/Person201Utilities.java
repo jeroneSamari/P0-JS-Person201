@@ -9,6 +9,7 @@ import java.net.*;
  * the same building or on the same floor, printing
  * @author Brandon Fain
  * @author Owen Astrachan
+ * @author Jerone Samari
  */
 
 public class Person201Utilities {
@@ -30,13 +31,18 @@ public class Person201Utilities {
         return sameDorm;
     }
 
-    /* 
-     * TODO: Fix to return a List of all people who are not equal to 
-     * person but are on the same floor in the same building
+    /**
+    * Fixed by Jerone Samari
+    * returns all non-equal Person201 objects that have
+    * the same building AND the same floor
     */
     public static List<Person201> sameFloor(Person201[] people, Person201 person) {
         List<Person201> sameFloor = new ArrayList<>();
-
+        for (Person201 p : people) {
+            if (!p.equals(person) && p.sameFloor(person)) {
+                sameFloor.add(p);
+            }
+        }
         return sameFloor;
     }
 

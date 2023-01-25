@@ -1,6 +1,7 @@
 /**
  * For use in Compsci 201, P0, Duke University
  * @author Brandon Fain
+ * @author Jerone Samari
  * To be modified by students in 201. 
  * when you make a modification, add yourself 
  * as an author in these comments.
@@ -54,12 +55,17 @@
         return false;
     }
 
-    /** 
-     * TODO: Fix so that returns true only if other has the
-     * same building AND the same floor.
+
+    /**
+    * Fixed by Jerone Samari
+    * Two Person201 objects return true if they
+    * have the same building AND the same floor 
     */
     public boolean sameFloor(Person201 other) {
-        return true;
+        if (this.sameBuilding(other) && myFloor==other.myFloor) {
+            return true;
+        }
+        return false;
     }
 
     /**
